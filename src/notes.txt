@@ -1,0 +1,5 @@
+//Main method gets executed
+//ApplicationContext is loaded
+//ApplicationContext reads xml configuration file
+//ApplicationContext pre loads one object for each bean in the config file
+//lazy-init="true" this infrom the spring container not to pre load object for this bean

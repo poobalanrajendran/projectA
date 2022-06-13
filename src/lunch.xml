@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+  http://www.springframework.org/schema/beans/spring-beans.xsd 
+  http://www.springframework.org/schema/context/ 
+  http://www.springframework.org/schema/context/spring-context.xsd">
+	<bean id="lf" class="com.chainsys.springproject.beans.LunchFactory" />
+	<bean id="chicken" class="com.chainsys.springproject.beans.Chicken" />
+	<bean id="soup" class="com.chainsys.springproject.beans.Soup" />
+	<bean id="vr" class="com.chainsys.springproject.beans.VegRoll" />
+	<bean id="si" class="com.chainsys.springproject.beans.SouthIndian" />
+	<bean id="ni" class="com.chainsys.springproject.beans.NorthIndian" />
+	<bean id="ch" class="com.chainsys.springproject.beans.Chinese" />
+	<bean id="ice" class="com.chainsys.springproject.beans.IceCream" />
+	<bean id="sweets" class="com.chainsys.springproject.beans.Sweets" />
+	<bean id="cake" class="com.chainsys.springproject.beans.Cake" />
+	<bean id="cake2" class="com.chainsys.springproject.beans.Cake" >
+	<constructor-arg type="java.lang.String" value = "plumCake"></constructor-arg></bean>
+	
+	<bean id="nvsilunch" class="com.chainsys.springproject.beans.Lunch" >
+	   <constructor-arg ref = "chicken"></constructor-arg>
+	   <constructor-arg ref = "cake2"></constructor-arg>
+	   <constructor-arg ref = "si"></constructor-arg>
+	</bean>
+	<bean id="vsilunch" class="com.chainsys.springproject.beans.Lunch" >
+	     <constructor-arg ref = "chicken"></constructor-arg>
+	   <constructor-arg ref = "ni"></constructor-arg>
+	   <constructor-arg ref = "cake"></constructor-arg>
+	  
+	</bean>
+	<bean id="nilunch" class="com.chainsys.springproject.beans.Lunch">
+	   <constructor-arg ref = "vr"></constructor-arg>
+	   <constructor-arg ref = "si"></constructor-arg>
+	   <constructor-arg ref = "ice"></constructor-arg>
+	</bean>
+	<bean id="chlunch" class="com.chainsys.springproject.beans.Lunch">
+	  <constructor-arg ref = "chicken"></constructor-arg>
+	   <constructor-arg ref = "ch"></constructor-arg>
+	   <constructor-arg ref = "sweets"></constructor-arg>
+	</bean>
+	
+</beans>
